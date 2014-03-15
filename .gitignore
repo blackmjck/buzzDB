@@ -1,0 +1,6 @@
+$ cat .gitignore
+# Ignore dependencies
+/node_modules
+/node_modules/**
+/.idea
+/.idea/**
