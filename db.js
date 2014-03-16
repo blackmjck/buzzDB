@@ -1,5 +1,5 @@
 /**
- * All things DB-related
+ * Random GET
  */
 var mongo = require('mongodb'),
     MongoClient = mongo.MongoClient,
