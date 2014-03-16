@@ -10,8 +10,13 @@ var mongo = require('mongodb'),
     base = "buzz";
 
 
-
-
+/**
+ * Array shuffling algorithm.
+ * Variant of Mike Bostock's Fisher-Yates Shuffle implementation. Source: http://bost.ocks.org/mike/shuffle/
+ *
+ * @param {Array} arr  The array to be shuffled
+ * @returns {Array} The shuffled array
+ */
 function shuffle( arr ) {
 
     var m = arr.length,
@@ -32,10 +37,19 @@ function shuffle( arr ) {
 
     return arr;
 
-};
+}
 
 
-
+/**
+ * Fetches a random single document from the DB
+ *
+ * @param db  The Mongo database connection
+ * @param collection  Reference to the collection within the database
+ * @param {Object} query  Query parameters for searching on
+ * @param {Object} options  Query options to pass to the DB connector
+ * @param {Function} success  Callback to be executed on successful query
+ * @param {Function} failure  Callback to be executed on failed operation
+ */
 function randomSingle( db, collection, query, options, success, failure ) {
 
     var rand = Math.random();
@@ -93,7 +107,22 @@ function randomSingle( db, collection, query, options, success, failure ) {
 }
 
 
+/**
+ * Fetches multiple random (unique) documents from the DB
+ *
+ * @param db  The Mongo database connection
+ * @param collection  Reference to the collection within the database
+ * @param {Object} query  Query parameters for searching on
+ * @param {Object} options  Query options to pass to the DB connector
+ * @param {Number} limit  Total number of results desired (pass null or undefined for no limit)
+ * @param {Function} success  Callback to be executed on successful query
+ * @param {Function} failure  Callback to be executed on failed operation
+ */
 function randomMultiple( db, collection, query, options, limit, success, failure ) {
+
+    console.log( options );
+
+    if( options.limit ) delete options.limit;
 
     collection.find( query, options ).toArray( function( err, docs ) {
 
@@ -102,12 +131,16 @@ function randomMultiple( db, collection, query, options, limit, success, failure
 
         if( err ) {
 
+            if( typeof err === "string" ) err = "Query error: " + err;
+
+            console.log( err );
+
             failure( err );
 
         } else {
 
             // now to randomize the array
-            docs = shuffle( docs).slice( 1, limit );
+            docs = shuffle( docs ).slice( 0, limit );
 
             // now just return a randomized chunk of the list, limited to the correct number
             success( docs );
@@ -135,27 +168,53 @@ exports.query = function( type, query, options, success, failure ) {
     mongoclient.open(function( err, mongoclient ) {
 
         var db = mongoclient.db( base ),
-            collection = db.collection( type );
+            collection = db.collection( type ),
+            opts = {};
 
 
+        /**
+         * Keep in mind that the options are for our use, but may not be directly usable by the Mongo connector.
+         * So there's a translation step or two.
+         */
         console.log( options );
+
+
+        if( options.perPage ) {
+
+            opts.limit = options.perPage;
+
+            if( options.page ) {
+
+                opts.skip = opts.limit * ( options.page - 1 );
+
+            }
+
+        } else if( !options.random ) {
+
+            delete options.page;
+
+        }
 
 
         if( options.random ) {
 
-            if( options.limit && options.limit === 1 ) {
+            if( options.perPage && options.perPage === 1 ) {
 
-                randomSingle( db, collection, query, options, success, failure );
+                console.log( 'Random single...' );
+
+                randomSingle( db, collection, query, opts, success, failure );
 
             } else {
 
-                randomMultiple( db, collection, query, options, success, failure );
+                console.log( 'Random multi... (limit ' + options.perPage + ')' );
+
+                randomMultiple( db, collection, query, opts, options.perPage, success, failure );
 
             }
 
         } else {
 
-            collection.find( query, options ).toArray( function( err, docs ) {
+            collection.find( query, opts ).toArray( function( err, docs ) {
 
                 db.close();
 
@@ -255,7 +314,7 @@ exports.update = function( type, id, item, success, failure ) {
 
         for( key in item ) {
 
-            changes[ '$set' ][ key ] = item[ key ];
+            if( item.hasOwnProperty( key ) ) changes[ '$set' ][ key ] = item[ key ];
 
         }
 
