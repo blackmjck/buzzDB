@@ -3,6 +3,7 @@
  */
 var connector = require( '../mongo' ),
     REST = require( '../rest' ),
+    generic = require( './generic'),
     base = 'words';
 
 
@@ -60,7 +61,15 @@ exports.getWord = function( req, res ) {
 
     connector.queryByID( base, req.params.id, {}, function( results ) {
 
-        REST.envelop.call( res, 200, 'RETRIEVED', '', results );
+        if( results.length ) {
+
+            REST.envelop.call( res, 200, 'RETRIEVED', '', results );
+
+        } else {
+
+            generic.missing( req, res, "Word '" + req.params.id + "' not found.", results );
+
+        }
 
     }, function( err ) {
 
