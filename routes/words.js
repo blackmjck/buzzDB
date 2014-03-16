@@ -15,18 +15,30 @@ exports.getAllWords = function( req, res ) {
         query = req.query;
 
 
+    // random or nonrandom?
     if( params.random || query.random ) {
         opts.random = true;
     } else {
         opts.random = false;
     }
+
+    // limit?
     if( params.perPage || query.perPage ) {
         opts.perPage = parseInt( params.perPage, 10 ) || parseInt( query.perPage, 10 );
     }
+
+    // pagination?
     if( params.page || query.page ) {
         opts.page = parseInt( params.page, 10 ) || parseInt( query.page, 10 );
     } else {
         opts.page = 1;
+    }
+
+    // required field(s)? Should be passed as a comma-separated string list
+    if( params.required ) {
+        opts.required = params.required.split(',');
+    } else if( query.required ) {
+        opts.required = query.required.split(',');
     }
 
 

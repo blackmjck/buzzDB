@@ -54,6 +54,7 @@ function randomSingle( db, collection, query, options, success, failure ) {
 
     var rand = Math.random();
 
+    console.log( query, options );
 
     // add the randomizer
     query.rand = { $gte: rand };
@@ -120,7 +121,7 @@ function randomSingle( db, collection, query, options, success, failure ) {
  */
 function randomMultiple( db, collection, query, options, limit, success, failure ) {
 
-    console.log( options );
+    console.log( query, options );
 
     if( options.limit ) delete options.limit;
 
@@ -176,9 +177,28 @@ exports.query = function( type, query, options, success, failure ) {
          * Keep in mind that the options are for our use, but may not be directly usable by the Mongo connector.
          * So there's a translation step or two.
          */
-        console.log( options );
+
+        // required field(s)
+        if( options.required ) {
+
+            var n = options.required.length;
+            while( n-- ) {
+                if( !query[ options.required[ n ] ] ) {
+                    query[ options.required[ n ] ] = {
+                        $exists: true,
+                        $ne: ""
+                    };
+                } else {
+                    query[ options.required[ n ] ].$exists = true;
+                    query[ options.required[ n ] ].$ne = "";
+                }
+
+            }
+
+        }
 
 
+        // limit per-page (and pagination)
         if( options.perPage ) {
 
             opts.limit = options.perPage;
@@ -196,6 +216,7 @@ exports.query = function( type, query, options, success, failure ) {
         }
 
 
+        // random v.s. non-random
         if( options.random ) {
 
             if( options.perPage && options.perPage === 1 ) {
@@ -213,6 +234,15 @@ exports.query = function( type, query, options, success, failure ) {
             }
 
         } else {
+
+            if( options.sortBy ) {
+
+                opts.sortBy = options.sortBy;
+
+            }
+
+            console.log( query, opts );
+
 
             collection.find( query, opts ).toArray( function( err, docs ) {
 
