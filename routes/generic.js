@@ -54,17 +54,20 @@ var missing = function( req, res, message, results ) {
 };
 
 
-var badMethod = function( req, res, acceptable ) {
+/**
+ * Response to bad verb calls to good endpoints (i.e. trying to POST to a GET-only endpoint)
+ *
+ * @param req
+ * @param res
+ */
+var badMethod = function( req, res ) {
 
     var method = req.route.method,
-        endpoint = req.route.path;
+        endpoint = req.route.path,
+        acceptable = res.get( 'Accepts' );
 
 
-    // mark the acceptable alternatives
-    res.set( 'Accepts', acceptable );
-
-
-    genericError( req, res, 405, "BADMETHOD", "Method " + method.toUpperCase() + " not allowed on endpoint " + endpoint, { method_attempted: method } );
+    genericError( req, res, 405, "BADMETHOD", "Method " + method.toUpperCase() + " not allowed on endpoint " + endpoint, { method_attempted: method, methods_accepted: acceptable } );
 
 };
 

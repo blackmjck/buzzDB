@@ -1,9 +1,10 @@
 {
   "name": "buzzDB",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "REST API for the buzzDB database",
   "author": "Steven Wiggins",
   "license": "MIT",
+  "private": true,
   "dependencies": {
       "express": "3.x",
       "mongodb": "latest"

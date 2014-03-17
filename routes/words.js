@@ -78,6 +78,15 @@ exports.getWord = function( req, res ) {
     });
 
 };
+exports.getType = function( req, res ) {
+
+    res.send( {
+        _id: '',
+        status: '',
+        msg: 'Not yet implemented'
+    } );
+
+};
 
 // POSTs
 exports.createWord = function( req, res ) {
