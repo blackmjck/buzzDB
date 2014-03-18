@@ -267,6 +267,9 @@ HTTP Status: 200 - Success
 
 
 ### Changelog ###
+* v0.1.1 Remote release (2014-03-17)
+    * Added wrapper for local or remote database connections
+    * Added credentials storage for configurable database connections
 * v0.1.0 Initial release (2014-03-16)
     * Added connectors for MongoDB on localhost
     * Turned on `/word`-based endpoints
