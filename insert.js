@@ -1,13 +1,54 @@
 var master = require('./buzzwords'),
     mongo = require('mongodb'),
-    Server = mongo.Server,
-    Db = mongo.Db,
-    BSON = mongo.BSONPure;
-
-var server = new Server('localhost', 27017, { auto_reconnect: true }),
-    db = new Db('buzz', server),
+    MongoClient = mongo.MongoClient,
+    mongourl = require('./creds').connect_url,
+    BSON = mongo.BSONPure,
     list = master.words,
     n = list.length;
+
+
+
+/**
+ * Mongo connector wrapper
+ *
+ * @param {Function} operation  Callback to be called on successful connection (receives the database object as its sole argument)
+ * @param {Function} [failure]  Optional callback to be called on failed connection
+ */
+var dbconnect = function( operation ) {
+
+    var failure;
+
+    if( arguments.length > 1 && typeof arguments[ 1 ] === 'function' ) {
+        failure = arguments[ 1 ];
+    }
+
+    MongoClient.connect( mongourl, function( err, db ) {
+
+        if( err ) {
+
+            console.log( 'MongoHQ connection failed.', err );
+
+            if( failure ) {
+
+                failure( err );
+
+            } else {
+
+                throw ( err );
+
+            }
+
+        } else {
+
+            operation( db );
+
+        }
+
+    });
+
+};
+
+
 
 
 while( n-- ) {
@@ -15,28 +56,16 @@ while( n-- ) {
 }
 
 
-db.open( function( err, db ) {
+dbconnect( function( db ) {
 
-    if( !err ) {
+    var collection = db.collection('words');
 
-        db.collection('words', function( err, collection ) {
-
-            collection.insert( master.words, { safe: true }, function( err, result ) {
-
-                db.close();
-
-                console.log( result );
-
-            });
-
-        });
-
-    } else {
+    collection.insert( master.words, { safe: true }, function( err, result ) {
 
         db.close();
 
-        console.log('MongoDB connection failed.');
+        console.log( result );
 
-    }
+    });
 
 });

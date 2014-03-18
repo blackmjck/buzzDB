@@ -3,11 +3,56 @@
  */
 var mongo = require('mongodb'),
     MongoClient = mongo.MongoClient,
+    mongourl = require('./creds').connect_url;
     Db = mongo.Db,
     Server = mongo.Server,
     BSON = mongo.BSONPure,
     mongoclient = new MongoClient( new Server( "localhost", 27017 ), { native_parser: true }),
     base = "buzz";
+
+
+
+/**
+ * Mongo connector wrapper
+ *
+ * @param {Function} operation  Callback to be called on successful connection (receives the database object as its sole argument)
+ * @param {Function} [failure]  Optional callback to be called on failed connection
+ */
+var dbconnect = function( operation ) {
+
+    var failure;
+
+    if( arguments.length > 1 && typeof arguments[ 1 ] === 'function' ) {
+        failure = arguments[ 1 ];
+    }
+
+    MongoClient.connect( mongourl, function( err, db ) {
+
+        if( err ) {
+
+            console.log( 'MongoHQ connection failed.', err );
+
+            if( failure ) {
+
+                failure( err );
+
+            } else {
+
+                throw ( err );
+
+            }
+
+        } else {
+
+            operation( db );
+
+        }
+
+    });
+
+};
+
+
 
 
 /**
@@ -166,10 +211,9 @@ function randomMultiple( db, collection, query, options, limit, success, failure
 exports.query = function( type, query, options, success, failure ) {
 
 
-    mongoclient.open(function( err, mongoclient ) {
+    dbconnect( function( db, failure ) {
 
-        var db = mongoclient.db( base ),
-            collection = db.collection( type ),
+        var collection = db.collection( type ),
             opts = {};
 
 
@@ -294,10 +338,9 @@ exports.queryByID = function( type, id, options, success, failure ) {
  */
 exports.insert = function( type, item, success, failure ) {
 
-    mongoclient.open(function( err, mongoclient ) {
+    dbconnect( function( db, failure ) {
 
-        var db = mongoclient.db( base ),
-            collection = db.collection( type ),
+        var collection = db.collection( type ),
             options = { safe: true };
 
         collection.insert( item, options, function( err, result ) {
@@ -333,10 +376,9 @@ exports.insert = function( type, item, success, failure ) {
  */
 exports.update = function( type, id, item, success, failure ) {
 
-    mongoclient.open(function( err, mongoclient ) {
+    dbconnect( function( db, failure ) {
 
-        var db = mongoclient.db( base ),
-            collection = db.collection( type ),
+        var collection = db.collection( type ),
             options = { safe: true },
             changes = { $set: {} },
             key;
@@ -381,10 +423,9 @@ exports.update = function( type, id, item, success, failure ) {
  */
 exports.remove = function( type, id, success, failure ) {
 
-    mongoclient.open(function( err, mongoclient ) {
+    dbconnect( function( db, failure ) {
 
-        var db = mongoclient.db( base ),
-            collection = db.collection( type ),
+        var collection = db.collection( type ),
             options = { w: 1 };
 
 
