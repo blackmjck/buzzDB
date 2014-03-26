@@ -23,6 +23,10 @@
  app.all( '*', valid.takesJSON );
 
 
+ // The splash/home page
+ app.get( '/', [ ], generic.home );
+
+
  // The GETs
  app.get( '/words', [ ], words.getAllWords );
  app.get( '/types', [ ], types.getAllTypes );

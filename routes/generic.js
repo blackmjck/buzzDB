@@ -2,7 +2,41 @@
  * Bits and bobs. Largely for erroneous route handling.
  */
 
-var REST = require( '../rest' );
+var REST = require( '../rest'),
+    fs = require('fs'),
+    md = require('marked');
+
+
+/**
+ * Generic home page
+ *
+ * @param req
+ * @param res
+ */
+var home = function( req, res ) {
+
+    fs.readFile( 'README.md', { encoding: 'utf8' }, function( err, data ) {
+
+        if(err) throw err;
+
+        md.setOptions({
+            gfm: true,
+            tables: true,
+            breaks: true,
+            sanitize: true,
+            smartLists: true,
+            smartypants: true
+        });
+
+        var md_text = md( data );
+
+        res.set('Content-Type', 'text/html');
+        res.send( 200, md_text );
+
+    });
+
+};
+
 
 
 /**
@@ -76,3 +110,4 @@ exports.genericError = genericError;
 exports.missingID = missingID;
 exports.missing = missing;
 exports.badMethod = badMethod;
+exports.home = home;
