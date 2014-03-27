@@ -1,6 +1,6 @@
 {
   "name": "buzzDB",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "REST API for the buzzDB database",
   "author": "Steven Wiggins",
   "license": "MIT",
