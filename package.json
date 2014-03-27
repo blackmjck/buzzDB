@@ -2,13 +2,27 @@
   "name": "buzzDB",
   "version": "0.1.2",
   "description": "REST API for the buzzDB database",
-  "author": "Steven Wiggins",
+  "homepage": "https://www.buzzdb.net/",
+  "author": "Steven Wiggins <guesswho@stevenwiggins.net> (http://www.stevenwiggins.net/)",
   "license": "MIT",
+  "bugs": {
+      "email": "buzzdb@stevenwiggins.net"
+  },
   "private": true,
   "dependencies": {
       "ejs": "latest",
       "express": "3.x",
       "mongodb": "latest",
       "marked": "latest"
+  },
+  "engines": {
+      "node": ">=0.10.20"
+  },
+  "scripts": {
+      "start": "node index.js"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://www.bitbucket.org/blackmjck/buzzdb.git"
   }
 }
