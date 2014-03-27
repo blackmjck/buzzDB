@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+      "ejs": "latest",
       "express": "3.x",
       "mongodb": "latest",
       "marked": "latest"

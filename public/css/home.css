@@ -1,0 +1,8 @@
+/* Fill-in styles for the readme/home page */
+
+.container table {
+    width: 100%;
+}
+.container td {
+    padding: 0.5em 1em;
+}

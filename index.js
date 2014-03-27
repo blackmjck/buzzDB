@@ -1,5 +1,6 @@
  var express = require('express'),
      app = express(),
+     ejs = require('ejs'),
      //passport = require('passport'),
      //OAuth2Strategy = require('passport-oauth').OAuth2Strategy,
      words = require('./routes/words'),
@@ -15,6 +16,9 @@
      app.use( express.logger( 'dev' ) );
      // for static files in /public
      app.use( express.static( __dirname + '/public' ) );
+     app.set( 'view engine', 'ejs' );
+     app.set( 'views',__dirname + '/public/views' );
+     app.set( 'view options', { layout:false, root: __dirname + '/public/views' } );
      app.use( express.bodyParser() );
  });
 
