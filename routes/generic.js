@@ -30,18 +30,6 @@ var home = function( req, res ) {
 
         var md_text = md( data );
 
-        // dress it up all fancy-like
-        /*
-        md_text = [
-            '<!doctype html><html><head>',
-            '<title>BuzzDB</title>',
-            '<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />',
-            '</head><body><div class="container">',
-            md_text,
-            '</div></body></html>'
-        ].join('');
-        */
-
         res.set('Content-Type', 'text/html');
         res.render( 'home.ejs', { contents: md_text } );
 
