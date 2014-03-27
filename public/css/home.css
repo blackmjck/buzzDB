@@ -6,3 +6,30 @@
 .container td {
     padding: 0.5em 1em;
 }
+
+body > .contribute {
+    position: absolute;
+    top: 4em;
+    right: -4em;
+    margin: 0;
+    padding: 0;
+    background: #205081;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: 0.25em 0.25em 0.3em rgba(0,0,0,0.4);
+    text-shadow: 0 0 1px #000;
+}
+body > .contribute:hover,
+body > .contribute:focus {
+    background: #C00;
+}
+.contribute a {
+    display: block;
+    height: 100%;
+    padding: 0.5em 4em;
+    color: #FFF;
+    text-decoration: none;
+}
