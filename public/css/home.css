@@ -7,12 +7,21 @@
     padding: 0.5em 1em;
 }
 
-body > .contribute {
+#contribute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14em;
+    height: 14em;
+    overflow: hidden;
+}
+#contribute .repo {
     position: absolute;
     top: 4em;
     right: -4em;
+    display: block;
     margin: 0;
-    padding: 0;
+    padding: 0.5em 4em;
     background: #205081;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -21,15 +30,10 @@ body > .contribute {
     transform: rotate(45deg);
     box-shadow: 0.25em 0.25em 0.3em rgba(0,0,0,0.4);
     text-shadow: 0 0 1px #000;
-}
-body > .contribute:hover,
-body > .contribute:focus {
-    background: #C00;
-}
-.contribute a {
-    display: block;
-    height: 100%;
-    padding: 0.5em 4em;
     color: #FFF;
     text-decoration: none;
+}
+#contribute .repo:hover,
+#contribute .repo:focus {
+    background: #C00;
 }
