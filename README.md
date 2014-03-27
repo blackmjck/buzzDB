@@ -1,6 +1,8 @@
 # BuzzDB #
 ## A RESTful API interface for the BuzzDB data layer ##
 
+![BuzzDB logo](https://www.buzzdb.net/media/logo.png "BuzzDB")
+
 *****
 
 The service stores and retrieves buzzwords as MongoDB documents in the form:
