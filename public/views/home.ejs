@@ -30,5 +30,15 @@
         </p>
     </footer>
 
+    <script>
+        // apply bootstrap table styles to the generically generated tables in the README.md
+        var tables = document.getElementsByTagName('table'),
+            i = tables.length;
+
+        while( i-- ) {
+            tables[ i ].className = 'table table-bordered table-striped';
+        }
+    </script>
+
 </body>
 </html>
