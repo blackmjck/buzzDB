@@ -31,23 +31,23 @@ _Note_: The API is currently restricted to HTTPS access only.
 
 1. Clone the BuzzDB repository on your server
 
-    $ git clone https://bitbucket.org/blackmjck/buzzdb.git
+        $ git clone https://bitbucket.org/blackmjck/buzzdb.git
 
 2. _(not required if connecting to a remote host)_ Install MongoDB on localhost
 3. _(optional)_ Create database `buzz` and collection `words` inside it.
 4. _(optional)_ Populate with test data from the samples provided in `buzzwords.js`
 
-    $ node insert.js
+        $ node insert.js
 
 5. Install dependencies via npm
 
-    $ cd /path/to/buzzDB
-    $ npm install
+        $ cd /path/to/buzzDB
+        $ npm install
 
 6. Update `creds.js` with the URL and credentials for your MongoDB connection
 7. Start the service
 
-    $ node index.js
+        $ node index.js
 
 8. Start querying!
 
