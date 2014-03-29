@@ -7,7 +7,7 @@
 
 The service stores and retrieves buzzwords as MongoDB documents in the form:
 
-```json
+```javascript
 {
     _id: "5324a5613725c5181205bac2",
     verb: "Scale",
@@ -78,7 +78,7 @@ required  | Specify required fields as comma-separated string values | no  | Str
 
 HTTP Status: 200 - Success
 
-```json
+```javascript
 {
     status: "RETRIEVED",
     msg: "",
@@ -135,7 +135,7 @@ HTTP Status: 200 - Success
 
 HTTP Status: 200 - Success
 
-```json
+```javascript
 {
     status: "RETRIEVED",
     msg: "",
@@ -170,7 +170,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 #### Sample Request ####
 
 
-```json
+```javascript
 **POST** /word  (with `Content-Type: application/json`)
 {
     "noun": "EER Diagram",
@@ -182,7 +182,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 HTTP Status: 201 - Created
 
-```json
+```javascript
 {
     status: "CREATED",
     msg: "",
@@ -216,7 +216,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 #### Sample Request ####
 
 
-```json
+```javascript
 **PUT** /word/5325cfcc95b1c9a410824be7  (with `Content-Type: application/json`)
 {
     "adj": "EER Diagrammed"
@@ -227,7 +227,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 HTTP Status: 200 - Success
 
-```json
+```javascript
 {
     status: "UPDATED",
     msg: "",
@@ -257,7 +257,7 @@ HTTP Status: 200 - Success
 
 HTTP Status: 200 - Success
 
-```json
+```javascript
 {
     status: "DELETED",
     msg: "",
