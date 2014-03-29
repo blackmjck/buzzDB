@@ -25,7 +25,10 @@ var home = function( req, res ) {
             breaks: true,
             sanitize: true,
             smartLists: true,
-            smartypants: true
+            smartypants: true,
+            highlight: function ( code ) {
+                return require('highlight.js').highlightAuto(code).value;
+            }
         });
 
         var md_text = md( data );

@@ -7,7 +7,7 @@
 
 The service stores and retrieves buzzwords as MongoDB documents in the form:
 
-```javascript
+```json
 {
     _id: "5324a5613725c5181205bac2",
     verb: "Scale",
@@ -31,23 +31,23 @@ _Note_: The API is currently restricted to HTTPS access only.
 
 1. Clone the BuzzDB repository on your server
 
-        $ git clone https://bitbucket.org/blackmjck/buzzdb.git
+    $ git clone https://bitbucket.org/blackmjck/buzzdb.git
 
 2. _(not required if connecting to a remote host)_ Install MongoDB on localhost
 3. _(optional)_ Create database `buzz` and collection `words` inside it.
 4. _(optional)_ Populate with test data from the samples provided in `buzzwords.js`
 
-        $ node insert.js
+    $ node insert.js
 
 5. Install dependencies via npm
 
-        $ cd /path/to/buzzDB
-        $ npm install
+    $ cd /path/to/buzzDB
+    $ npm install
 
 6. Update `creds.js` with the URL and credentials for your MongoDB connection
 7. Start the service
 
-        $ node index.js
+    $ node index.js
 
 8. Start querying!
 
@@ -72,13 +72,13 @@ required  | Specify required fields as comma-separated string values | no  | Str
 
 #### Sample Request ####
 
-        **GET** /words?perPage=5&required=noun,verb,adj
+    **GET** /words?perPage=5&required=noun,verb,adj
 
 #### Sample Response ####
 
 HTTP Status: 200 - Success
 
-```javascript
+```json
 {
     status: "RETRIEVED",
     msg: "",
@@ -129,13 +129,13 @@ HTTP Status: 200 - Success
 
 #### Sample Request ####
 
-        **GET** /word/5324a5613725c5181205bacc
+    **GET** /word/5324a5613725c5181205bacc
 
 #### Sample Response ####
 
 HTTP Status: 200 - Success
 
-```javascript
+```json
 {
     status: "RETRIEVED",
     msg: "",
@@ -169,9 +169,9 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 #### Sample Request ####
 
-        **POST** /word  (with `Content-Type: application/json`)
 
-```javascript
+```json
+**POST** /word  (with `Content-Type: application/json`)
 {
     "noun": "EER Diagram",
     "verb": "EER Diagram"
@@ -182,7 +182,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 HTTP Status: 201 - Created
 
-```javascript
+```json
 {
     status: "CREATED",
     msg: "",
@@ -215,9 +215,9 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 #### Sample Request ####
 
-        **PUT** /word/5325cfcc95b1c9a410824be7  (with `Content-Type: application/json`)
 
-```javascript
+```json
+**PUT** /word/5325cfcc95b1c9a410824be7  (with `Content-Type: application/json`)
 {
     "adj": "EER Diagrammed"
 }
@@ -227,7 +227,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 HTTP Status: 200 - Success
 
-```javascript
+```json
 {
     status: "UPDATED",
     msg: "",
@@ -251,13 +251,13 @@ HTTP Status: 200 - Success
 
 #### Sample Request ####
 
-        **DELETE** /word/5324a5613725c5181205bacc
+    **DELETE** /word/5324a5613725c5181205bacc
 
 #### Sample Response ####
 
 HTTP Status: 200 - Success
 
-```javascript
+```json
 {
     status: "DELETED",
     msg: "",
