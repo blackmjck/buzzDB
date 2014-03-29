@@ -72,7 +72,7 @@ required  | Specify required fields as comma-separated string values | no  | Str
 
 #### Sample Request ####
 
-**GET** /words?perPage=5&required=noun,verb,adj
+        **GET** /words?perPage=5&required=noun,verb,adj
 
 #### Sample Response ####
 
@@ -129,7 +129,7 @@ HTTP Status: 200 - Success
 
 #### Sample Request ####
 
-**GET** /word/5324a5613725c5181205bacc
+        **GET** /word/5324a5613725c5181205bacc
 
 #### Sample Response ####
 
@@ -169,7 +169,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 #### Sample Request ####
 
-**POST** /word  _(with `Content-Type: application/json`)
+        **POST** /word  (with `Content-Type: application/json`)
 
 ```javascript
 {
@@ -215,7 +215,7 @@ adj       | Adjectival form   | No\*      | String  |        |
 
 #### Sample Request ####
 
-**PUT** /word/5325cfcc95b1c9a410824be7  _(with `Content-Type: application/json`)
+        **PUT** /word/5325cfcc95b1c9a410824be7  (with `Content-Type: application/json`)
 
 ```javascript
 {
@@ -251,7 +251,7 @@ HTTP Status: 200 - Success
 
 #### Sample Request ####
 
-**DELETE** /word/5324a5613725c5181205bacc
+        **DELETE** /word/5324a5613725c5181205bacc
 
 #### Sample Response ####
 
