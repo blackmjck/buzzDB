@@ -1,7 +1,7 @@
 # BuzzDB #
 ## A RESTful API interface for the BuzzDB data layer ##
 
-![BuzzDB logo](https://www.buzzdb.net/media/logo.png "BuzzDB")
+![BuzzDB logo](https://raw.github.com/blackmjck/buzzDB/master/media/logo.png)
 
 *****
 
