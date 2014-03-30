@@ -282,7 +282,7 @@ HTTP Status: 200 - Success
 ### Changelog ###
 * v0.1.2 Informed release (2014-03-26)
     * Added EJS template support for static views
-    * Linked README.md content to root page reqeusts
+    * Linked README.md content to root page requests
 * v0.1.1 Remote release (2014-03-17)
     * Added wrapper for local or remote database connections
     * Added credentials storage for configurable database connections
