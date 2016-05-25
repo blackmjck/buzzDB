@@ -6,24 +6,25 @@
   "author": "Steven Wiggins <guesswho@stevenwiggins.net> (http://www.stevenwiggins.net/)",
   "license": "MIT",
   "bugs": {
-      "email": "buzzdb@stevenwiggins.net"
+    "email": "buzzdb@stevenwiggins.net"
   },
   "private": true,
   "dependencies": {
-      "ejs": "latest",
-      "express": "3.x",
-      "mongodb": "latest",
-      "marked": "latest",
-      "highlight.js": "latest"
+    "ejs": "latest",
+    "express": "3.x",
+    "highlight.js": "latest",
+    "html-pdf": "^2.0.1",
+    "marked": "latest",
+    "mongodb": "latest"
   },
   "engines": {
-      "node": ">=0.10.20"
+    "node": ">=0.10.20"
   },
   "scripts": {
-      "start": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/blackmjck/buzzDB.git"
+    "type": "git",
+    "url": "https://github.com/blackmjck/buzzDB.git"
   }
 }
