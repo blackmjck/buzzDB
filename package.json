@@ -12,6 +12,7 @@
   "dependencies": {
     "ejs": "latest",
     "express": "3.x",
+    "handlebars": "^4.0.5",
     "highlight.js": "latest",
     "html-pdf": "^2.0.1",
     "marked": "latest",
