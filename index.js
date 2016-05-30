@@ -1,13 +1,12 @@
- var express = require('express'),
+ var express = require( 'express' ),
      app = express(),
-     ejs = require('ejs'),
-     //passport = require('passport'),
-     //OAuth2Strategy = require('passport-oauth').OAuth2Strategy,
-     words = require('./routes/words'),
-     types = require('./routes/types'),
-     phrases = require('./routes/phrases'),
-     generic = require('./routes/generic'),
-     valid = require('./valid'),
+     ejs = require( 'ejs' ),
+     words = require( './routes/words' ),
+     types = require( './routes/types' ),
+     phrases = require( './routes/phrases' ),
+     generic = require( './routes/generic' ),
+     bingo = require( './routes/bingo' ),
+     valid = require( './valid' ),
      APP_PORT = 3555;
 
 
@@ -38,6 +37,8 @@
  app.get( '/type/:id', [ valid.checkID ], types.getType );
  app.get( '/word/:id/type', [ valid.checkID ], words.getType );
  app.get( '/phrases', [ ], phrases.getPhrase );
+ app.get( '/bingo', [ ], bingo.getCard );
+ app.get( '/bingo/:id', [ ], bingo.getCardById );
 
  // The POSTs (require auth)
  app.post( '/word', [ valid.detectJSON ], words.createWord );
