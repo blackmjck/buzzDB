@@ -3,7 +3,7 @@
 var pdf = require( 'html-pdf' ),
     fs = require( 'fs' ),
     path = require( 'path' ),
-    crypto = require( 'crypto' ),
+    md5 = require( './lib/md5' ),
     handlebars = require( 'handlebars' ),
     templatePath = path.normalize( __dirname + '/templates/' ),
     outputPath = path.normalize( templatePath + '../pdf/' ),
@@ -56,7 +56,7 @@ words = words.shuffle().slice( 0, 24 );
 words.splice( 12, 0, 'FREE SPACE' );
 
 // generate hash from the word list
-fileData.hash = crypto.createHash( 'md5' ).update( words.join( '' ) ).digest( 'hex' );
+fileData.hash = md5( words.join( '' ) );
 fileData.url += fileData.hash;
 
 // split into 5 rows of 5 words
