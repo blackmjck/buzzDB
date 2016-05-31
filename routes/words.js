@@ -17,11 +17,7 @@ exports.getAllWords = function( req, res ) {
 
 
     // random or nonrandom?
-    if( params.random || query.random ) {
-        opts.random = true;
-    } else {
-        opts.random = false;
-    }
+    opts.random = ( params.random || query.random );
 
     // limit?
     if( params.perPage || query.perPage ) {
@@ -79,6 +75,10 @@ exports.getWord = function( req, res ) {
 
 };
 exports.getType = function( req, res ) {
+
+    /**
+     * TODO: implement getType()
+     */
 
     res.send( {
         _id: '',
