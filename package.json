@@ -16,8 +16,10 @@
     "handlebars": "^4.0.5",
     "highlight.js": "latest",
     "html-pdf": "^2.0.1",
+    "jasmine": "^2.4.1",
     "marked": "latest",
     "mongodb": "^2.1.21",
+    "request": "^2.72.0",
     "serve-favicon": "^2.3.0"
   },
   "engines": {
