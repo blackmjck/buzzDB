@@ -7,10 +7,10 @@ var pdf = require( 'html-pdf' ),
     handlebars = require( 'handlebars' ),
     templatePath = path.normalize( __dirname + '/templates/' ),
     outputPath = path.normalize( templatePath + '../pdf/' ),
-    source = fs.readFileSync( templatePath + 'card.html' ).toString(),
+    source = fs.readFileSync( templatePath + 'card.hbs' ).toString(),
     template = handlebars.compile( source );
 
-var json = require( './words.json' ).response,
+var json = require( './mock/words.json' ).response,
     words = [];
 
 var fileData = {

@@ -35,7 +35,7 @@ _Note_: The API is currently restricted to HTTPS access only.
 
 2. _(not required if connecting to a remote host)_ Install MongoDB on localhost
 3. _(optional)_ Create database `buzz` and collection `words` inside it.
-4. _(optional)_ Populate with test data from the samples provided in `buzzwords.js`
+4. _(optional)_ Populate with test data from the samples provided in `mock/buzzwords.js`
 
         $ node insert.js
 
@@ -44,10 +44,10 @@ _Note_: The API is currently restricted to HTTPS access only.
         $ cd /path/to/buzzDB
         $ npm install
 
-6. Update `creds.js` with the URL and credentials for your MongoDB connection
+6. Update `lib/creds.js` with the URL and credentials for your MongoDB connection
 7. Start the service
 
-        $ node index.js
+        $ node server.js
 
 8. Start querying!
 

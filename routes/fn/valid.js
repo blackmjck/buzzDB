@@ -1,8 +1,10 @@
+'use strict';
+
 /**
  * Custom validation utilities
  */
 
-var generic = require('./routes/generic');
+var generic = require( './generic' );
 
 
 /**
@@ -11,7 +13,7 @@ var generic = require('./routes/generic');
  * @param id  The string to test
  * @returns {Boolean}
  */
-var testID = function( id ) {
+function testID( id ) {
 
     return /^[0-9a-f]{24}$/i.test( id );
 
@@ -25,7 +27,7 @@ var testID = function( id ) {
  * @param res
  * @param next
  */
-var checkID = function( req, res, next ) {
+function checkID( req, res, next ) {
 
     var id = req.params.id;
 
@@ -39,7 +41,7 @@ var checkID = function( req, res, next ) {
 
     }
 
-};
+}
 
 
 /**
@@ -49,11 +51,13 @@ var checkID = function( req, res, next ) {
  * @param res
  * @param next
  */
-var detectJSON = function( req, res, next ) {
+function detectJSON( req, res, next ) {
 
-    var type = req.get('content-type');
+    var type = req.get( 'content-type' );
 
-    if( !type ) type = req.get('Content-Type');
+    if( !type ) {
+        type = req.get( 'Content-Type' );
+    }
 
     console.log( type );
 
@@ -67,7 +71,7 @@ var detectJSON = function( req, res, next ) {
 
     }
 
-};
+}
 
 
 /**
@@ -77,26 +81,30 @@ var detectJSON = function( req, res, next ) {
  * @param res
  * @param next
  */
-var takesJSON = function( req, res, next ) {
+function takesJSON( req, res, next ) {
 
-    if( req.accepts('json') ) {
+    if( req.accepts( 'json' ) ) {
 
         next();
 
     } else {
 
-        var accepts = req.get('Accepts');
+        var accepts = req.get( 'Accepts' );
 
-        if( !accepts ) accepts = req.get('accepts');
+        if( !accepts ) {
+            accepts = req.get( 'accepts' );
+        }
 
         generic.genericError( req, res, 406, 'CANTRETURN', 'The recipient must be able to accept JSON content.', { accepts_currently: accepts } );
 
     }
 
+}
+
+
+module.exports = {
+    checkID:    checkID,
+    detectJSON: detectJSON,
+    takesJSON:  takesJSON,
+    testID:     testID
 };
-
-
-exports.testID = testID;
-exports.checkID = checkID;
-exports.detectJSON = detectJSON;
-exports.takesJSON = takesJSON;
