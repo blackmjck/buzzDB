@@ -9,6 +9,13 @@
     margin-top: 1.5em;
 }
 
+#banner {
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 #contribute {
     position: absolute;
     top: 0;

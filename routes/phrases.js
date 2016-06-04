@@ -1,10 +1,18 @@
+'use strict'
+
 /**
  * The place for all routes phrase-related.
  */
 
-// GETs
-exports.getPhrase = function( req, res ) {
+var express = require( 'express' ),
+    router = express.Router();
 
+// GETs
+function getPhrase( req, res ) {
+
+    /**
+     * TODO: flesh out this stub
+     */
     res.send( {
         _id: req.params.id,
         noun: 'AJAX',
@@ -14,4 +22,9 @@ exports.getPhrase = function( req, res ) {
         format: '{{ verb }} the {{ adjective }} {{ noun }}'
     } );
 
-};
+}
+
+// set paths on the router object
+router.get( '/', getPhrase );
+
+module.exports = router;

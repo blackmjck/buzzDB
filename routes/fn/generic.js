@@ -2,9 +2,9 @@
  * Bits and bobs. Largely for erroneous route handling.
  */
 
-var REST = require( '../rest'),
-    fs = require('fs'),
-    md = require('marked');
+var REST = require( './../../lib/rest'),
+    fs = require( 'fs' ),
+    md = require( 'marked' );
 
 
 /**
@@ -17,7 +17,7 @@ var home = function( req, res ) {
 
     fs.readFile( 'README.md', { encoding: 'utf8' }, function( err, data ) {
 
-        if(err) throw err;
+        if( err ) throw err;
 
         md.setOptions({
             gfm: true,
@@ -27,14 +27,14 @@ var home = function( req, res ) {
             smartLists: true,
             smartypants: true,
             highlight: function ( code ) {
-                return require('highlight.js').highlightAuto(code).value;
+                return require( 'highlight.js' ).highlightAuto( code ).value;
             }
         });
 
         var md_text = md( data );
 
         res.set('Content-Type', 'text/html');
-        res.render( 'home.ejs', { contents: md_text } );
+        res.render( 'home.hbs', { layout: false, contents: md_text } );
 
     });
 
@@ -99,8 +99,8 @@ var missing = function( req, res, message, results ) {
  */
 var badMethod = function( req, res ) {
 
-    var method = req.route.method,
-        endpoint = req.route.path,
+    var method = req.method,
+        endpoint = req.path,
         acceptable = res.get( 'Accepts' );
 
 

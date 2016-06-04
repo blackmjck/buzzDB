@@ -1,0 +1,1094 @@
+{
+  "status": "RETRIEVED",
+  "msg": "",
+  "response": [
+    {
+      "noun": "A/B Testing",
+      "adj": "A/B Tested",
+      "verb": "A/B Test",
+      "rand": 0.6390803079120815,
+      "_id": "532712f6208ff1a910076fa0"
+    },
+    {
+      "noun": "Acceptance Criteria",
+      "rand": 0.980729395756498,
+      "_id": "532712f6208ff1a910076fa1"
+    },
+    {
+      "noun": "Accessibility",
+      "adj": "Accessible",
+      "rand": 0.36304733785800636,
+      "_id": "532712f6208ff1a910076fa2"
+    },
+    {
+      "noun": "Acquisition",
+      "adj": "Acquisitive",
+      "verb": "Acquire",
+      "rand": 0.5403893946204334,
+      "_id": "532712f6208ff1a910076fa3"
+    },
+    {
+      "noun": "Activity Stream",
+      "rand": 0.7978273583576083,
+      "_id": "532712f6208ff1a910076fa4"
+    },
+    {
+      "noun": "Agenda",
+      "adj": "On Agenda",
+      "rand": 0.4470295156352222,
+      "_id": "532712f6208ff1a910076fa5"
+    },
+    {
+      "noun": "Agile",
+      "adj": "Agile",
+      "rand": 0.6523138654883951,
+      "_id": "532712f6208ff1a910076fa6"
+    },
+    {
+      "noun": "AJAX",
+      "adj": "AJAXy",
+      "rand": 0.9787546112202108,
+      "_id": "532712f6208ff1a910076fa7"
+    },
+    {
+      "noun": "Analytics",
+      "adj": "Analytical",
+      "verb": "Analyze",
+      "rand": 0.29668706050142646,
+      "_id": "532712f6208ff1a910076fa8"
+    },
+    {
+      "noun": "Assets",
+      "rand": 0.2028890154324472,
+      "_id": "532712f6208ff1a910076fa9"
+    },
+    {
+      "adj": "Asynchronous",
+      "rand": 0.9463588919024915,
+      "_id": "532712f6208ff1a910076faa"
+    },
+    {
+      "noun": "Authentication",
+      "adj": "Authenticated",
+      "verb": "Authenticate",
+      "rand": 0.7306807585991919,
+      "_id": "532712f6208ff1a910076fab"
+    },
+    {
+      "noun": "Availability",
+      "adj": "Available",
+      "rand": 0.37856283807195723,
+      "_id": "532712f6208ff1a910076fac"
+    },
+    {
+      "noun": "Batch",
+      "adj": "Batched",
+      "verb": "Batch",
+      "rand": 0.4578643231652677,
+      "_id": "532712f6208ff1a910076fad"
+    },
+    {
+      "noun": "Benchmark",
+      "adj": "Benchmarked",
+      "verb": "Benchmark",
+      "rand": 0.274329527746886,
+      "_id": "532712f6208ff1a910076fae"
+    },
+    {
+      "noun": "Best Practices",
+      "adj": "Best Practiced",
+      "rand": 0.2951975492760539,
+      "_id": "532712f6208ff1a910076faf"
+    },
+    {
+      "noun": "Bulk",
+      "adj": "Bulk",
+      "rand": 0.8412449604365975,
+      "_id": "532712f6208ff1a910076fb0"
+    },
+    {
+      "noun": "Bundle",
+      "adj": "Bundled",
+      "rand": 0.4072110797278583,
+      "_id": "532712f6208ff1a910076fb1"
+    },
+    {
+      "noun": "Burndown Chart",
+      "rand": 0.5904340534470975,
+      "_id": "532712f6208ff1a910076fb2"
+    },
+    {
+      "noun": "Business Intelligence (BI)",
+      "rand": 0.09793653571978211,
+      "_id": "532712f6208ff1a910076fb3"
+    },
+    {
+      "noun": "BYOD",
+      "rand": 0.35486750351265073,
+      "_id": "532712f6208ff1a910076fb4"
+    },
+    {
+      "noun": "Clarification",
+      "adj": "Clarified",
+      "verb": "Clarify",
+      "rand": 0.07328188139945269,
+      "_id": "532712f6208ff1a910076fb5"
+    },
+    {
+      "noun": "Closure",
+      "rand": 0.7513520489446819,
+      "_id": "532712f6208ff1a910076fb6"
+    },
+    {
+      "noun": "Cloud",
+      "adj": "Cloud-Based",
+      "rand": 0.3385507839266211,
+      "_id": "532712f6208ff1a910076fb7"
+    },
+    {
+      "noun": "Coaching",
+      "adj": "Coached",
+      "verb": "Coach",
+      "rand": 0.0550094754435122,
+      "_id": "532712f6208ff1a910076fb8"
+    },
+    {
+      "noun": "Collaboration",
+      "adj": "Collaborative",
+      "verb": "Collaborate",
+      "rand": 0.8038530549965799,
+      "_id": "532712f6208ff1a910076fb9"
+    },
+    {
+      "noun": "Collation",
+      "adj": "Collated",
+      "verb": "Collate",
+      "rand": 0.5569731986615807,
+      "_id": "532712f6208ff1a910076fba"
+    },
+    {
+      "noun": "Community Indicator",
+      "adj": "Community Indicated",
+      "rand": 0.3365461411885917,
+      "_id": "532712f6208ff1a910076fbb"
+    },
+    {
+      "adj": "Competitive",
+      "verb": "Compete",
+      "rand": 0.4076847869437188,
+      "_id": "532712f6208ff1a910076fbc"
+    },
+    {
+      "noun": "Component",
+      "rand": 0.058834012830629945,
+      "_id": "532712f6208ff1a910076fbd"
+    },
+    {
+      "adj": "Comprehensive",
+      "verb": "Comprehend",
+      "rand": 0.8562739449553192,
+      "_id": "532712f6208ff1a910076fbe"
+    },
+    {
+      "noun": "Consolidation",
+      "adj": "Consolidated",
+      "verb": "Consolidate",
+      "rand": 0.8452357260975987,
+      "_id": "532712f6208ff1a910076fbf"
+    },
+    {
+      "noun": "Consumption",
+      "adj": "Consuming",
+      "verb": "Consume",
+      "rand": 0.7335008238442242,
+      "_id": "532712f6208ff1a910076fc0"
+    },
+    {
+      "noun": "Content Management System (CMS)",
+      "rand": 0.9271369124762714,
+      "_id": "532712f6208ff1a910076fc1"
+    },
+    {
+      "noun": "Continuous Integration (CI)",
+      "adj": "Continuously Integrated",
+      "verb": "Continuously Integrate",
+      "rand": 0.024294963805004954,
+      "_id": "532712f6208ff1a910076fc2"
+    },
+    {
+      "noun": "Conversion",
+      "adj": "Converted",
+      "verb": "Convert",
+      "rand": 0.05538741941563785,
+      "_id": "532712f6208ff1a910076fc3"
+    },
+    {
+      "noun": "Cost Savings",
+      "adj": "Cost Saving",
+      "rand": 0.6185957926791161,
+      "_id": "532712f6208ff1a910076fc4"
+    },
+    {
+      "noun": "Create, Read, Update, Delete (CRUD)",
+      "rand": 0.13057828089222312,
+      "_id": "532712f6208ff1a910076fc5"
+    },
+    {
+      "adj": "Customer Centric",
+      "rand": 0.006170126609504223,
+      "_id": "532712f6208ff1a910076fc6"
+    },
+    {
+      "noun": "Customer Communication",
+      "adj": "Customer Communicating",
+      "verb": "Communicate to Customers",
+      "rand": 0.4055719659663737,
+      "_id": "532712f6208ff1a910076fc7"
+    },
+    {
+      "adj": "Data Driven",
+      "rand": 0.3372484145220369,
+      "_id": "532712f6208ff1a910076fc8"
+    },
+    {
+      "noun": "Data Migration",
+      "verb": "Migrate",
+      "rand": 0.9889822334516793,
+      "_id": "532712f6208ff1a910076fc9"
+    },
+    {
+      "noun": "Data Mining",
+      "adj": "Data Mined",
+      "verb": "Data Mine",
+      "rand": 0.5910427866037935,
+      "_id": "532712f6208ff1a910076fca"
+    },
+    {
+      "noun": "Data Warehousing",
+      "adj": "Data Warehoused",
+      "verb": "Data Warehouse",
+      "rand": 0.7994792081881315,
+      "_id": "532712f6208ff1a910076fcb"
+    },
+    {
+      "noun": "Development",
+      "adj": "In Development",
+      "verb": "Develop",
+      "rand": 0.22352464287541807,
+      "_id": "532712f6208ff1a910076fcc"
+    },
+    {
+      "noun": "DevOps",
+      "rand": 0.5211812919005752,
+      "_id": "532712f6208ff1a910076fcd"
+    },
+    {
+      "noun": "Disruption",
+      "adj": "Disruptive",
+      "verb": "Disrupt",
+      "rand": 0.6881402905564755,
+      "_id": "532712f6208ff1a910076fce"
+    },
+    {
+      "noun": "Documentation",
+      "adj": "Documented",
+      "verb": "Document",
+      "rand": 0.398040987085551,
+      "_id": "532712f6208ff1a910076fcf"
+    },
+    {
+      "adj": "Dynamic",
+      "rand": 0.8470020540989935,
+      "_id": "532712f6208ff1a910076fd0"
+    },
+    {
+      "noun": "eCommerce",
+      "adj": "eCommerce",
+      "rand": 0.1944139152765274,
+      "_id": "532712f6208ff1a910076fd1"
+    },
+    {
+      "noun": "Engagement",
+      "adj": "Engaged",
+      "verb": "Engage",
+      "rand": 0.4270356255583465,
+      "_id": "532712f6208ff1a910076fd2"
+    },
+    {
+      "noun": "Enterprise",
+      "adj": "Enterprise",
+      "rand": 0.1679037343710661,
+      "_id": "532712f6208ff1a910076fd3"
+    },
+    {
+      "noun": "Epic",
+      "adj": "Epic",
+      "rand": 0.5576923042535782,
+      "_id": "532712f6208ff1a910076fd4"
+    },
+    {
+      "noun": "Facet",
+      "adj": "Faceted",
+      "verb": "Facet",
+      "rand": 0.016454349271953106,
+      "_id": "532712f6208ff1a910076fd5"
+    },
+    {
+      "noun": "Feature",
+      "adj": "Featured",
+      "verb": "Feature",
+      "rand": 0.19827398378401995,
+      "_id": "532712f6208ff1a910076fd6"
+    },
+    {
+      "noun": "Focus Group",
+      "rand": 0.4258275958709419,
+      "_id": "532712f6208ff1a910076fd7"
+    },
+    {
+      "noun": "Framework",
+      "adj": "Frameworked",
+      "rand": 0.7789737046696246,
+      "_id": "532712f6208ff1a910076fd8"
+    },
+    {
+      "noun": "Functional Test",
+      "adj": "Functionally Tested",
+      "verb": "Functionally Test",
+      "rand": 0.7823007937986404,
+      "_id": "532712f6208ff1a910076fd9"
+    },
+    {
+      "noun": "Game Changer",
+      "adj": "Game Changing",
+      "rand": 0.9886024633888155,
+      "_id": "532712f6208ff1a910076fda"
+    },
+    {
+      "noun": "HTML5",
+      "adj": "HTML5",
+      "rand": 0.5818190344143659,
+      "_id": "532712f6208ff1a910076fdb"
+    },
+    {
+      "noun": "Inheritance",
+      "adj": "Inherited",
+      "verb": "Inherit",
+      "rand": 0.7672268834430724,
+      "_id": "532712f6208ff1a910076fdc"
+    },
+    {
+      "noun": "Impact",
+      "adj": "Impactful",
+      "verb": "Impact",
+      "rand": 0.7457645270042121,
+      "_id": "532712f6208ff1a910076fdd"
+    },
+    {
+      "noun": "Implementation",
+      "adj": "Implemented",
+      "verb": "Implement",
+      "rand": 0.7720320855733007,
+      "_id": "532712f6208ff1a910076fde"
+    },
+    {
+      "noun": "Increment",
+      "adj": "Incremental",
+      "verb": "Increment",
+      "rand": 0.3584595990832895,
+      "_id": "532712f6208ff1a910076fdf"
+    },
+    {
+      "noun": "Information Architecture",
+      "rand": 0.6128478685859591,
+      "_id": "532712f6208ff1a910076fe0"
+    },
+    {
+      "noun": "Injection",
+      "adj": "Injected",
+      "verb": "Inject",
+      "rand": 0.2991949748247862,
+      "_id": "532712f6208ff1a910076fe1"
+    },
+    {
+      "noun": "Innovation",
+      "adj": "Innovated",
+      "verb": "Innovate",
+      "rand": 0.6192176891490817,
+      "_id": "532712f6208ff1a910076fe2"
+    },
+    {
+      "noun": "Interaction",
+      "adj": "Interactive",
+      "verb": "Interact",
+      "rand": 0.2063769835513085,
+      "_id": "532712f6208ff1a910076fe3"
+    },
+    {
+      "noun": "Interface",
+      "adj": "Interfaced",
+      "verb": "Interface",
+      "rand": 0.8021941382903606,
+      "_id": "532712f6208ff1a910076fe4"
+    },
+    {
+      "noun": "Interoperability",
+      "adj": "Interoperable",
+      "verb": "Interoperate",
+      "rand": 0.4186308446805924,
+      "_id": "532712f6208ff1a910076fe5"
+    },
+    {
+      "noun": "Iteration",
+      "adj": "Iterative",
+      "verb": "Iterate",
+      "rand": 0.7776744826696813,
+      "_id": "532712f6208ff1a910076fe6"
+    },
+    {
+      "noun": "Key Performance Indicator (KPI)",
+      "rand": 0.6806901933159679,
+      "_id": "532712f6208ff1a910076fe7"
+    },
+    {
+      "noun": "Layer",
+      "adj": "Layered",
+      "rand": 0.71844866219908,
+      "_id": "532712f6208ff1a910076fe8"
+    },
+    {
+      "noun": "Leadership",
+      "adj": "Leading",
+      "verb": "Lead",
+      "rand": 0.8011585858184844,
+      "_id": "532712f6208ff1a910076fe9"
+    },
+    {
+      "noun": "Lean UX",
+      "adj": "Lean",
+      "rand": 0.7751959289889783,
+      "_id": "532712f6208ff1a910076fea"
+    },
+    {
+      "noun": "Leverage",
+      "adj": "Leveraged",
+      "verb": "Leverage",
+      "rand": 0.32378729013726115,
+      "_id": "532712f6208ff1a910076feb"
+    },
+    {
+      "noun": "Life Cycle",
+      "rand": 0.5371772418729961,
+      "_id": "532712f6208ff1a910076fec"
+    },
+    {
+      "noun": "Low Hanging Fruit",
+      "adj": "Low Hanging",
+      "rand": 0.14045484899543226,
+      "_id": "532712f6208ff1a910076fed"
+    },
+    {
+      "noun": "Market Leadership",
+      "adj": "Market Leading",
+      "verb": "Market Lead",
+      "rand": 0.2830452036578208,
+      "_id": "532712f6208ff1a910076fee"
+    },
+    {
+      "noun": "Market Share",
+      "rand": 0.6592920552939177,
+      "_id": "532712f6208ff1a910076fef"
+    },
+    {
+      "noun": "Measurability",
+      "adj": "Measurable",
+      "verb": "Measure",
+      "rand": 0.21178036276251078,
+      "_id": "532712f6208ff1a910076ff0"
+    },
+    {
+      "noun": "Metadata",
+      "rand": 0.5087165413424373,
+      "_id": "532712f6208ff1a910076ff1"
+    },
+    {
+      "noun": "Metric",
+      "rand": 0.7620589679572731,
+      "_id": "532712f6208ff1a910076ff2"
+    },
+    {
+      "noun": "Middleware",
+      "adj": "Middleware",
+      "rand": 0.016628743382170796,
+      "_id": "532712f6208ff1a910076ff3"
+    },
+    {
+      "noun": "Milestone",
+      "rand": 0.4405790474265814,
+      "_id": "532712f6208ff1a910076ff4"
+    },
+    {
+      "noun": "Minimum Marketable Feature (MMF)",
+      "rand": 0.48082248377613723,
+      "_id": "532712f6208ff1a910076ff5"
+    },
+    {
+      "noun": "Minimum Viable Product (MVP)",
+      "rand": 0.0741443163715303,
+      "_id": "532712f6208ff1a910076ff6"
+    },
+    {
+      "noun": "Mission Criticality",
+      "adj": "Mission Critical",
+      "rand": 0.33690659375861287,
+      "_id": "532712f6208ff1a910076ff7"
+    },
+    {
+      "adj": "Mobile First",
+      "rand": 0.11791611765511334,
+      "_id": "532712f6208ff1a910076ff8"
+    },
+    {
+      "noun": "Model View Controller (MVC)",
+      "rand": 0.7658602360170335,
+      "_id": "532712f6208ff1a910076ff9"
+    },
+    {
+      "noun": "Module",
+      "adj": "Modular",
+      "rand": 0.9195427936501801,
+      "_id": "532712f6208ff1a910076ffa"
+    },
+    {
+      "noun": "Navigation",
+      "adj": "Navigative",
+      "verb": "Navigate",
+      "rand": 0.8677129899151623,
+      "_id": "532712f6208ff1a910076ffb"
+    },
+    {
+      "adj": "Next Level",
+      "rand": 0.009455450577661395,
+      "_id": "532712f6208ff1a910076ffc"
+    },
+    {
+      "noun": "NoSQL Database",
+      "adj": "NoSQL",
+      "rand": 0.4025003428105265,
+      "_id": "532712f6208ff1a910076ffd"
+    },
+    {
+      "adj": "Object Oriented",
+      "rand": 0.5053258282132447,
+      "_id": "532712f6208ff1a910076ffe"
+    },
+    {
+      "noun": "Open Source Project",
+      "adj": "Open Source",
+      "rand": 0.996856183046475,
+      "_id": "532712f6208ff1a910076fff"
+    },
+    {
+      "noun": "Optimization",
+      "adj": "Optimized",
+      "verb": "Optimize",
+      "rand": 0.14895804831758142,
+      "_id": "532712f6208ff1a910077000"
+    },
+    {
+      "noun": "Overhead",
+      "rand": 0.08815440814942122,
+      "_id": "532712f6208ff1a910077001"
+    },
+    {
+      "noun": "Paradigm",
+      "adj": "Paradigmatic",
+      "rand": 0.03901829035021365,
+      "_id": "532712f6208ff1a910077002"
+    },
+    {
+      "adj": "Parallel",
+      "rand": 0.8995939129963517,
+      "_id": "532712f6208ff1a910077003"
+    },
+    {
+      "noun": "Performance Indicator",
+      "adj": "Performance Indicating",
+      "rand": 0.5271513098850846,
+      "_id": "532712f6208ff1a910077004"
+    },
+    {
+      "noun": "Pipeline",
+      "verb": "Pipe",
+      "rand": 0.04074066807515919,
+      "_id": "532712f6208ff1a910077005"
+    },
+    {
+      "noun": "Points",
+      "rand": 0.9054715395905077,
+      "_id": "532712f6208ff1a910077006"
+    },
+    {
+      "noun": "Pragmatism",
+      "adj": "Pragmatic",
+      "rand": 0.5381923809181899,
+      "_id": "532712f6208ff1a910077007"
+    },
+    {
+      "noun": "Preprocessor",
+      "adj": "Preprocessed",
+      "verb": "Preprocess",
+      "rand": 0.4469845900312066,
+      "_id": "532712f6208ff1a910077008"
+    },
+    {
+      "noun": "Procedure",
+      "adj": "Procedural",
+      "rand": 0.6345387485343963,
+      "_id": "532712f6208ff1a910077009"
+    },
+    {
+      "noun": "Process Control",
+      "adj": "Process Controlled",
+      "rand": 0.8680356342811137,
+      "_id": "532712f6208ff1a91007700a"
+    },
+    {
+      "noun": "Procurement",
+      "adj": "Procuring",
+      "verb": "Procure",
+      "rand": 0.25610452773980796,
+      "_id": "532712f6208ff1a91007700b"
+    },
+    {
+      "noun": "Product Demonstration",
+      "rand": 0.8774882690049708,
+      "_id": "532712f6208ff1a91007700c"
+    },
+    {
+      "noun": "Product Management",
+      "adj": "Product Managed",
+      "verb": "Product Manage",
+      "rand": 0.8623410367872566,
+      "_id": "532712f6208ff1a91007700d"
+    },
+    {
+      "noun": "Progressive Enhancement",
+      "adj": "Progressively Enhanced",
+      "verb": "Progressively Enhance",
+      "rand": 0.045706945937126875,
+      "_id": "532712f6208ff1a91007700e"
+    },
+    {
+      "noun": "Project",
+      "rand": 0.7284222382586449,
+      "_id": "532712f6208ff1a91007700f"
+    },
+    {
+      "noun": "Quality",
+      "adj": "Qualitative",
+      "rand": 0.10223662341013551,
+      "_id": "532712f6208ff1a910077010"
+    },
+    {
+      "noun": "Quality Assurance (QA)",
+      "rand": 0.5961418095976114,
+      "_id": "532712f6208ff1a910077011"
+    },
+    {
+      "noun": "Quantity",
+      "adj": "Quantitative",
+      "rand": 0.7496388137806207,
+      "_id": "532712f6208ff1a910077012"
+    },
+    {
+      "noun": "Outreach",
+      "adj": "Reached out to",
+      "verb": "Reach out to",
+      "rand": 0.5493871967773885,
+      "_id": "532712f6208ff1a910077013"
+    },
+    {
+      "noun": "Refactoring",
+      "adj": "Refactored",
+      "verb": "Refactor",
+      "rand": 0.8692651104647666,
+      "_id": "532712f6208ff1a910077014"
+    },
+    {
+      "noun": "Release",
+      "adj": "Released",
+      "verb": "Release",
+      "rand": 0.6036309970077127,
+      "_id": "532712f6208ff1a910077015"
+    },
+    {
+      "noun": "Remote Access",
+      "adj": "Remotely Accessible",
+      "verb": "Remotely Access",
+      "rand": 0.2636422135401517,
+      "_id": "532712f6208ff1a910077016"
+    },
+    {
+      "noun": "Requirement",
+      "adj": "Required",
+      "verb": "Require",
+      "rand": 0.11526016658172011,
+      "_id": "532712f6208ff1a910077017"
+    },
+    {
+      "noun": "Responsiveness",
+      "adj": "Responsive",
+      "rand": 0.5147454545367509,
+      "_id": "532712f6208ff1a910077018"
+    },
+    {
+      "noun": "REST",
+      "adj": "RESTful",
+      "rand": 0.4300726312212646,
+      "_id": "532712f6208ff1a910077019"
+    },
+    {
+      "noun": "Retrospective",
+      "adj": "Retrospective",
+      "rand": 0.07395654590800405,
+      "_id": "532712f6208ff1a91007701a"
+    },
+    {
+      "noun": "Return On Investment (ROI)",
+      "rand": 0.6453092223964632,
+      "_id": "532712f6208ff1a91007701b"
+    },
+    {
+      "noun": "Risk Management",
+      "adj": "Risk Managed",
+      "verb": "Risk Manage",
+      "rand": 0.6561527717858553,
+      "_id": "532712f6208ff1a91007701c"
+    },
+    {
+      "noun": "Roles",
+      "rand": 0.9945384294260293,
+      "_id": "532712f6208ff1a91007701d"
+    },
+    {
+      "noun": "Scalability",
+      "adj": "Scalable",
+      "verb": "Scale",
+      "rand": 0.9730117360595614,
+      "_id": "532712f6208ff1a91007701f"
+    },
+    {
+      "noun": "SCRUM",
+      "rand": 0.7101095309481025,
+      "_id": "532712f6208ff1a910077020"
+    },
+    {
+      "noun": "Semantics",
+      "adj": "Semantic",
+      "rand": 0.45263590500690043,
+      "_id": "532712f6208ff1a910077021"
+    },
+    {
+      "noun": "Skeumorphism",
+      "adj": "Skeumorphic",
+      "verb": "Skeumorph",
+      "rand": 0.6600882704369724,
+      "_id": "532712f6208ff1a910077022"
+    },
+    {
+      "noun": "Skin",
+      "adj": "Skinned",
+      "verb": "Skin",
+      "rand": 0.03088584542274475,
+      "_id": "532712f6208ff1a910077023"
+    },
+    {
+      "noun": "Single Page App",
+      "adj": "Single Page",
+      "rand": 0.06326598138548434,
+      "_id": "532712f6208ff1a910077024"
+    },
+    {
+      "noun": "Smoke Testing",
+      "adj": "Smoke Tested",
+      "verb": "Smoke Test",
+      "rand": 0.7609252620022744,
+      "_id": "532712f6208ff1a910077025"
+    },
+    {
+      "noun": "Social Media",
+      "adj": "Social",
+      "rand": 0.6889815055765212,
+      "_id": "532712f6208ff1a910077026"
+    },
+    {
+      "noun": "Spike",
+      "adj": "Spiked",
+      "rand": 0.5553457178175449,
+      "_id": "532712f6208ff1a910077027"
+    },
+    {
+      "noun": "Sprint",
+      "rand": 0.07960699126124382,
+      "_id": "532712f6208ff1a910077028"
+    },
+    {
+      "noun": "Strategy",
+      "adj": "Strategic",
+      "verb": "Strategize",
+      "rand": 0.0035552738700062037,
+      "_id": "532712f6208ff1a910077029"
+    },
+    {
+      "noun": "Sustainability",
+      "adj": "Sustainable",
+      "verb": "Sustain",
+      "rand": 0.07112352247349918,
+      "_id": "532712f6208ff1a91007702a"
+    },
+    {
+      "noun": "Synergy",
+      "adj": "Synergistic",
+      "verb": "Synergize",
+      "rand": 0.8679775514174253,
+      "_id": "532712f6208ff1a91007702b"
+    },
+    {
+      "noun": "Timebox",
+      "adj": "Timeboxed",
+      "verb": "Timebox",
+      "rand": 0.39896664884872735,
+      "_id": "532712f6208ff1a91007702c"
+    },
+    {
+      "noun": "Transformation",
+      "adj": "Transformative",
+      "verb": "Transform",
+      "rand": 0.7123431980144233,
+      "_id": "532712f6208ff1a91007702d"
+    },
+    {
+      "noun": "Transparency",
+      "adj": "Transparent",
+      "rand": 0.6900576350744814,
+      "_id": "532712f6208ff1a91007702e"
+    },
+    {
+      "noun": "Turnover",
+      "rand": 0.36094939266331494,
+      "_id": "532712f6208ff1a91007702f"
+    },
+    {
+      "noun": "Unit Test",
+      "adj": "United Tested",
+      "verb": "Unit Test",
+      "rand": 0.961183720966801,
+      "_id": "532712f6208ff1a910077030"
+    },
+    {
+      "noun": "User Experience (UX)",
+      "rand": 0.7372827585786581,
+      "_id": "532712f6208ff1a910077031"
+    },
+    {
+      "noun": "User Focus",
+      "adj": "User Focused",
+      "rand": 0.5610170399304479,
+      "_id": "532712f6208ff1a910077032"
+    },
+    {
+      "noun": "User Interaction (UI)",
+      "verb": "User Interact",
+      "rand": 0.4981538699939847,
+      "_id": "532712f6208ff1a910077033"
+    },
+    {
+      "noun": "User Story",
+      "rand": 0.5881666415371001,
+      "_id": "532712f6208ff1a910077034"
+    },
+    {
+      "noun": "Utilization",
+      "adj": "Utilized",
+      "verb": "Utilize",
+      "rand": 0.29137736768461764,
+      "_id": "532712f6208ff1a910077035"
+    },
+    {
+      "noun": "Value Addition",
+      "adj": "Value Added",
+      "verb": "Value Add",
+      "rand": 0.9121235443744808,
+      "_id": "532712f6208ff1a910077036"
+    },
+    {
+      "noun": "Vertical",
+      "adj": "Vertical",
+      "rand": 0.23942098347470164,
+      "_id": "532712f6208ff1a910077037"
+    },
+    {
+      "noun": "Visualization",
+      "adj": "Visualized",
+      "verb": "Visualize",
+      "rand": 0.5084214014932513,
+      "_id": "532712f6208ff1a910077038"
+    },
+    {
+      "noun": "Walking Skeleton",
+      "rand": 0.09202953986823559,
+      "_id": "532712f6208ff1a910077039"
+    },
+    {
+      "noun": "Web 2.0",
+      "adj": "Web 2.0",
+      "rand": 0.46931321709416807,
+      "_id": "532712f6208ff1a91007703a"
+    },
+    {
+      "noun": "Winning Culture",
+      "adj": "Winning",
+      "rand": 0.9104647759813815,
+      "_id": "532712f6208ff1a91007703b"
+    },
+    {
+      "noun": "Wireframe",
+      "adj": "Wireframed",
+      "verb": "Wireframe",
+      "rand": 0.946247446583584,
+      "_id": "532712f6208ff1a91007703c"
+    },
+    {
+      "noun": "Wishlist",
+      "adj": "Wishlisted",
+      "verb": "Wishlist",
+      "rand": 0.09531685966067016,
+      "_id": "532712f6208ff1a91007703d"
+    },
+    {
+      "noun": "Workflow",
+      "rand": 0.39281693869270384,
+      "_id": "532712f6208ff1a91007703e"
+    },
+    {
+      "noun": "Work Stream",
+      "rand": 0.25387860648334026,
+      "_id": "532712f6208ff1a91007703f"
+    },
+    {
+      "noun": "Linked Data",
+      "verb": "Data Link",
+      "rand": 0.2133250313345343,
+      "_id": "532712f6208ff1a910077040"
+    },
+    {
+      "noun": "Internet of Things",
+      "rand": 0.22657589660957456,
+      "_id": "532712f6208ff1a910077041"
+    },
+    {
+      "noun": "Tag Cloud",
+      "rand": 0.7625393809285015,
+      "_id": "532712f6208ff1a910077042"
+    },
+    {
+      "noun": "Taxonomy",
+      "adj": "Taxonomic",
+      "verb": "Taxonomize",
+      "rand": 0.7830063360743225,
+      "_id": "532712f6208ff1a910077043"
+    },
+    {
+      "noun": "Ontology",
+      "adj": "Ontological",
+      "rand": 0.05389876430854201,
+      "_id": "532712f6208ff1a910077044"
+    },
+    {
+      "noun": "Enumeration",
+      "adj": "Enumerated",
+      "verb": "Enumerate",
+      "rand": 0.4180591485928744,
+      "_id": "532712f6208ff1a910077045"
+    },
+    {
+      "noun": "Big Data",
+      "rand": 0.979054358555004,
+      "_id": "532712f6208ff1a910077046"
+    },
+    {
+      "noun": "Machine Learning",
+      "verb": "Machine Learn",
+      "rand": 0.725506596500054,
+      "_id": "532712f6208ff1a910077047"
+    },
+    {
+      "noun": "Process Engineering",
+      "verb": "Process Engineer",
+      "rand": 0.7806949976366013,
+      "_id": "5343f6a2db47c41e2b0158ed"
+    },
+    {
+      "noun": "Revenue Pipeline",
+      "rand": 0.019181075040251017,
+      "_id": "5343f6bfdb47c41e2b0158ee"
+    },
+    {
+      "noun": "Revenue Funnel",
+      "adj": "Revenue Funneled",
+      "rand": 0.28103706194087863,
+      "_id": "5343f6cfdb47c41e2b0158ef"
+    },
+    {
+      "noun": "Design Real Estate",
+      "rand": 0.6451612913515419,
+      "_id": "5346a1eadb47c41e2b0158f0"
+    },
+    {
+      "noun": "Campaign Management",
+      "rand": 0.046961233019828796,
+      "_id": "556cc4afdb47c41e2b0158f7"
+    },
+    {
+      "adj": "Omni-Channel",
+      "rand": 0.6360698586795479,
+      "_id": "556cc4f6db47c41e2b0158f8"
+    },
+    {
+      "noun": "Architecture Leadership",
+      "adj": "Architecture Led",
+      "rand": 0.6580790418665856,
+      "_id": "556cc652db47c41e2b0158f9"
+    },
+    {
+      "noun": "integration",
+      "verb": "integrate",
+      "adj": "integrated",
+      "rand": 0.6074866526760161,
+      "_id": "556ccb20db47c41e2b0158fa"
+    },
+    {
+      "noun": "touchpoint",
+      "rand": 0.4519535368308425,
+      "_id": "55802e38db47c41e2b0158fb"
+    },
+    {
+      "noun": "phase",
+      "adj": "phased",
+      "rand": 0.7757433059159666,
+      "_id": "55802eafdb47c41e2b0158fc"
+    },
+    {
+      "noun": "knowledge worker",
+      "rand": 0.7351037559565157,
+      "_id": "55ddd71bdb47c41e2b0158fd"
+    },
+    {
+      "noun": "tribe leader",
+      "rand": 0.6371621284633875,
+      "_id": "55ddd98fdb47c41e2b0158fe"
+    }
+  ],
+  "results": 186
+}

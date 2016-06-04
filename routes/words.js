@@ -1,14 +1,21 @@
+'use strict';
+
 /**
  * The place for all routes word-related.
  */
-var connector = require( '../mongo' ),
-    REST = require( '../rest' ),
-    generic = require( './generic'),
+
+var express = require( 'express' ),
+    routerAll = express.Router(),
+    routerSingle = express.Router(),
+    connector = require( '../lib/mongo' ),
+    REST = require( './../lib/rest' ),
+    generic = require( './fn/generic'),
+    valid = require( './fn/valid' ),
     base = 'words';
 
 
 // GETs
-exports.getAllWords = function( req, res ) {
+function getAllWords( req, res ) {
 
     // optional URL params
     var opts = {},
@@ -17,11 +24,7 @@ exports.getAllWords = function( req, res ) {
 
 
     // random or nonrandom?
-    if( params.random || query.random ) {
-        opts.random = true;
-    } else {
-        opts.random = false;
-    }
+    opts.random = ( params.random || query.random );
 
     // limit?
     if( params.perPage || query.perPage ) {
@@ -56,8 +59,10 @@ exports.getAllWords = function( req, res ) {
 
     });
 
-};
-exports.getWord = function( req, res ) {
+}
+
+
+function getWord( req, res ) {
 
     connector.queryByID( base, req.params.id, {}, function( results ) {
 
@@ -77,8 +82,14 @@ exports.getWord = function( req, res ) {
 
     });
 
-};
-exports.getType = function( req, res ) {
+}
+
+
+function getType( req, res ) {
+
+    /**
+     * TODO: implement getType()
+     */
 
     res.send( {
         _id: '',
@@ -86,10 +97,10 @@ exports.getType = function( req, res ) {
         msg: 'Not yet implemented'
     } );
 
-};
+}
 
 // POSTs
-exports.createWord = function( req, res ) {
+function createWord( req, res ) {
 
     var item = req.body;
 
@@ -111,10 +122,10 @@ exports.createWord = function( req, res ) {
 
     });
 
-};
+}
 
 // PUTs
-exports.updateWord = function( req, res ) {
+function updateWord( req, res ) {
 
     var item = req.body;
 
@@ -128,8 +139,10 @@ exports.updateWord = function( req, res ) {
 
     });
 
-};
-exports.assignType = function( req, res ) {
+}
+
+
+function assignType( req, res ) {
 
     res.send( {
         _id: '',
@@ -137,10 +150,11 @@ exports.assignType = function( req, res ) {
         msg: 'Not yet implemented'
     } );
 
-};
+}
+
 
 // DELETEs
-exports.deleteWord = function( req, res ) {
+function deleteWord( req, res ) {
 
     connector.remove( base, req.params.id, function( results ) {
 
@@ -161,8 +175,10 @@ exports.deleteWord = function( req, res ) {
 
     });
 
-};
-exports.unassignType = function( req, res ) {
+}
+
+
+function unassignType( req, res ) {
 
     res.send( {
         _id: '',
@@ -170,4 +186,37 @@ exports.unassignType = function( req, res ) {
         msg: 'Not yet implemented'
     } );
 
+}
+
+
+/**
+ * '/words' endpoints
+ */
+routerAll.get( '/', getAllWords );
+
+
+/**
+ * '/word' and '/word/:id/type/:id' endpoints
+ */
+routerSingle.get( '/:id', [ valid.checkID ], getWord );
+routerSingle.get( '/:id/type', [ valid.checkID ], getType );
+
+// The POSTs (require auth)
+routerSingle.post( '/', [ valid.detectJSON ], createWord );
+
+// The PUTs (require auth)
+routerSingle.put( '/:id', [ valid.checkID, valid.detectJSON ], updateWord );
+routerSingle.put( '/:wordID/type/:typeID', [ valid.detectJSON ], assignType );
+
+// The DELETEs (require auth)
+routerSingle.delete( '/:id', [ valid.checkID ], deleteWord );
+routerSingle.delete( '/:wordID/type/:typeID', unassignType );
+
+
+/**
+ * Expose both sets of endpoints
+ */
+module.exports = {
+    all: routerAll,
+    single: routerSingle
 };

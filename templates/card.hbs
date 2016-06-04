@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html, body {
+            box-sizing: border-box;
+            font-family: Helvetica, sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            display: block;
+            height: 11in;
+            margin: 50px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            width: 8.5in;
+        }
+
+        .bingo {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        .bingo .space {
+            border: 2px solid #000;
+            font-family: Courier, monospace;
+            font-size: 12px;
+            font-weight: bold;
+            height: 70px;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+            width: 90px;
+        }
+
+        @media print {
+            .page {
+                height: 100%;
+                margin: 0;
+                page-break-after: auto;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <div id="pageHeader">
+            <h1 class="title">{{title}}</h1>
+        </div>
+
+        <table class="bingo">
+        {{#each rows}}
+            <tr>
+                {{#each this}}
+                    <td class="space">{{this}}</td>
+                {{/each}}
+            </tr>
+        {{/each}}
+        </table>
+
+        <div id="pageFooter">
+            Permalink: <a href="{{url}}">{{url}}</a>
+        </div>
+
+    </div>
+</body>
+</html>
