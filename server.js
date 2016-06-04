@@ -55,6 +55,6 @@ app.all( '*', generic.badMethod );
 
 
 // start 'er up
-app.listen( port, function() {
+module.exports = app.listen( port, function() {
     console.log( 'App listening on port ' + port );
 } );
