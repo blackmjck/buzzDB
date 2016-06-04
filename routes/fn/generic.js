@@ -99,8 +99,8 @@ var missing = function( req, res, message, results ) {
  */
 var badMethod = function( req, res ) {
 
-    var method = req.route.method,
-        endpoint = req.route.path,
+    var method = req.method,
+        endpoint = req.path,
         acceptable = res.get( 'Accepts' );
 
 
