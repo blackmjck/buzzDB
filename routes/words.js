@@ -109,7 +109,7 @@ function createWord( req, res ) {
     connector.insert( base, item, function( results ) {
 
         // add the URL for the newly created object, as per REST standard
-        var id = results[ 0 ]._id,
+        var id = results.ops[ 0 ]._id,
             opts = {
                 url: '/word/' + id
             };
