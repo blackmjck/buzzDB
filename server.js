@@ -1,7 +1,10 @@
 'use strict';
 
 // dependencies
-var bodyParser = require( 'body-parser' ),
+var path = require( 'path' ),
+    fs = require( 'fs' ),
+    morgan = require( 'morgan' ),
+    bodyParser = require( 'body-parser' ),
     favicon = require( 'serve-favicon' ),
     handlebars = require( 'express-handlebars' ),
     express = require( 'express' ),
@@ -32,6 +35,9 @@ app.use( express.static( __dirname + '/public' ) );
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded( { extended: true } ) );
 
+// Populate the access log
+var accessLogStream = fs.createWriteStream( path.join( __dirname, 'access.log' ), { flags: 'a' } );
+app.use( morgan( 'combined', { stream: accessLogStream } ) );
 
 // Make sure the request can be handled on the return side
 app.all( '*', valid.takesJSON );

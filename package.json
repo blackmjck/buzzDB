@@ -18,7 +18,8 @@
     "html-pdf": "^2.0.1",
     "marked": "latest",
     "mongodb": "^2.1.21",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "morgan": "~1.7.0"
   },
   "engines": {
     "node": ">=0.10.20"
